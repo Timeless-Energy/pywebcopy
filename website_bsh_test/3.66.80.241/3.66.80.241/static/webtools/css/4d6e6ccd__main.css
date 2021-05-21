@@ -1,0 +1,388 @@
+/* ==================================================== */
+/* general design elements */
+/* ==================================================== */
+html, body {
+	background: white; 
+	font: normal 1em Arial, sans-serif;
+	font-family: sans-serif;
+	counter-reset: section;
+}
+
+/* ==================================================== */
+/* h1 */
+/* ==================================================== */
+
+h1 {
+	color: black;
+	padding: 0.5em;
+}
+h2 {color: black;
+}
+h3 {
+	color: black;
+}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.text_result {
+	font-size: large;
+	font-weight: bold;
+}
+/*.file {*/
+/*	width: 300px;*/
+/*  	margin: 0 0 0 0;*/
+/*	padding: 6px 39px;*/
+/*	background-color: #ff5c00;*/
+/*	border-color: #ff5c00;*/
+/*	border-radius: 4px;*/
+/*	font-size: 16px;*/
+/*	color: #fff;*/
+/*}*/
+/*.file:hover {*/
+/*	outline: none;*/
+/*	background-color: #b74b2a;*/
+/*	color: #c4bdbd;*/
+/*}*/
+/*.button {*/
+/*	width: 164px;*/
+/*  	margin: 0 0 0 0;*/
+/*	padding: 6px 39px;*/
+/*	background-color: #ff5c00;*/
+/*	border-color: #ff5c00;*/
+/*	border-radius: 4px;*/
+/*	font-size: 16px;*/
+/*	color: #fff;*/
+/*}*/
+/*.button:hover {*/
+/*	outline: none;*/
+/*	background-color: #b74b2a;*/
+/*	color: #c4bdbd;*/
+/*}*/
+/*.download {*/
+/*	width: 200px;*/
+/*	margin: 0 0 0 0;*/
+/*	padding: 6px 18px;*/
+/*	background-color: #ff5c00;*/
+/*	border-color: #ff5c00;*/
+/*	border-radius: 4px;*/
+/*	font-size: 16px;*/
+/*	color: #fff;*/
+/*	cursor: pointer;*/
+/*	text-decoration: none;*/
+/*}*/
+/*.download:hover {*/
+/*	outline: none;*/
+/*	background-color: #b74b2a;*/
+/*	color: #c4bdbd;*/
+/*}*/
+.backToTopButton {
+	position: absolute;
+	right: 9%;
+	font-size: small;
+	text-decoration: none;
+	background-color: #EEEEEE;
+	color: #333333;
+	padding: 2px 6px 2px 6px;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #CCCCCC;
+}
+
+
+/* ==================================================== */
+/* header */
+/* ==================================================== */
+.header {
+	display: flex;
+}
+.header a {
+	padding: 20px 20px 20px 35px;
+	color: black;
+	background-size: 00%;
+	text-decoration: none;
+}
+.header h1 {
+	color: #d72222;
+	padding: 0.5em;
+}
+.logo {
+	float: left;
+	height: 37px;
+}
+
+/* ==================================================== */
+/* navigation */
+/* ==================================================== */
+nav ul{
+	width: 98%;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+nav li {
+    margin: 0;
+    flex: 1 1 0;
+	color: #790b0b;
+  }
+nav a {
+	background-color: #ff5c00;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	width: 95%;
+	margin: .5em 0;
+	padding: .5em 1em;
+	font-size: large;
+	font-weight: normal;
+}
+nav a:hover{
+	background-color: #b74b2a;
+}
+nav a.active:hover {
+	color: #0d19a5;
+	text-decoration:underline;
+	font-weight: bold;
+}
+nav a[aria-current="page"]{
+	/*color: #55b517;*/
+	text-decoration:underline;
+	font-weight: bold;
+}
+nav a.visited {
+	text-decoration:underline;
+	font-weight: bold;
+}
+.markieren{
+	text-decoration:underline;
+	font-weight: bold;
+}
+
+
+/* ==================================================== */
+/* content: tool box */
+/* ==================================================== */
+.toolbox {
+	margin:  30px auto;
+	border: 1px solid;
+	display: flex;
+    flex-wrap: wrap;	
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 .3em .6em 0 rgba(0, 0, 0, .75);
+	background-color: #eeeeee;
+}
+p.tool-item{
+	width: 160px;
+	margin:  30px;
+	padding: 20px;
+	border: 1px solid;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 .3em .3em 0 rgba(0, 0, 0, .75);
+	background-color: #ffffff;
+	color: black;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	display: table-cell;
+	vertical-align: bottom;
+}
+p.tool-item:hover{
+	box-shadow: 0 .6em .9em 0 rgba(0, 0, 0, .75);
+}
+p.tool-item a{
+	color: black;
+	text-decoration: none;
+	font-weight: normal;
+	text-align: center;
+}
+p.tool-item img{
+	width: 80%;
+	height: auto;
+	/*align: center;*/
+	margin: 0 0 30px 0;
+}
+
+
+/* ==================================================== */
+/* content: webtools section and side panel */
+/* ==================================================== */
+article {
+	margin:  30px auto;
+	border: 0 solid;
+	display: flex;  
+	list-style-type: none;
+}
+article p{
+	text-align: justify;
+}
+article p.imagetext{
+	text-align: justify;
+	width: 95%;
+}
+article ul{
+	margin: 5px 0;
+	padding: 0;
+	list-style-type: none;
+}
+article ul.square {
+	margin: -10px 15px;
+	padding: 0;
+	list-style-type: square;
+}
+article li{
+	margin: 10px 0;
+	padding: 0 0;
+}
+article a{
+	color: black;
+	/*text-decoration: none;*/
+	font-weight: normal;
+	text-decoration: underline;
+}
+article a[purpose="mail"]{
+	color: black;
+	text-decoration: none;
+	font-weight: normal;
+}
+article_vspace {
+	border:  0 solid black;
+	flex: 0.00;
+}
+
+/*webtools section*/
+mainsection{
+	position: relative;
+	border:  0 solid black;
+	padding: 0 40px 0 20px;
+	flex: 3.0;
+}
+mainsection h3::before{
+	counter-increment: section;
+	content: counter(section) ". ";
+}
+mainsection select.description {
+	width: 240px;
+}
+mainsection label.description {
+	width: 100px;
+	display: inline-block;
+	padding: 10px 0;
+}
+mainsection input.description {
+	width: 233px;
+	display: inline-block;
+	padding: 1px 1px 1px 5px;
+}
+mainsection label.units {
+	padding: 10px 10px;
+}
+
+mainsection p{
+	width: 95%;
+}
+mainsection table {
+	width: 95%;
+	margin: 30px 0;
+	border-collapse: collapse;
+	border: 1px solid;
+	box-shadow: 0 .0em .0em 0 rgba(0, 0, 0, .75);
+}
+mainsection table.small {
+	width: 50%;
+	margin: 30px 0;
+	border-collapse: collapse;
+	border: 1px solid;
+	box-shadow: 0 .0em .0em 0 rgba(0, 0, 0, .75);
+}
+mainsection table.compressormodel {
+	width: 40%;
+	margin: 30px 0;
+	border-collapse: collapse;
+	border: 1px solid;
+	box-shadow: 0 .0em .0em 0 rgba(0, 0, 0, .75);
+	text-align: left;
+	background-color: #f0f0f0;
+}
+mainsection table.N2Cap {
+	width: 20%;
+	margin: 30px 0px;
+	border-collapse: collapse;
+	border: 1px solid;
+	box-shadow: 0 .0em .0em 0 rgba(0, 0, 0, .75);
+	text-align: left;
+	background-color: #f0f0f0;
+}
+mainsection th {
+	padding: 10px;
+	border: 1px solid;
+	font-weight: bold;
+	background-color: #eeeeee;
+}
+mainsection td {
+	padding: 7px;
+	font-size: medium;
+	border: 1px solid;
+}
+mainsection td.param {
+	width: 25%;
+	font-family: monospace;
+	text-align: left;
+}
+mainsection td.unit {
+	width: 10%;
+	font-family: monospace;
+	text-align: center;
+}
+
+/*side panel*/
+sidepanel  {
+	border:  2px solid #999;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 .3em .6em 0 rgba(0, 0, 0, .75);
+	background-color: #ffffee;
+	margin: 75px 1% 30px 0;
+	padding: 20px;
+	flex: 1;
+}
+
+
+
+/* ==================================================== */
+/* two-column */
+/* ==================================================== */
+two_columns {
+	margin:  10px auto;
+	border: 0 solid;
+	display: flex;  
+	list-style-type: none;
+}
+column{
+	border:  0 solid black;
+	padding: 0 40px 0 20px;
+	flex: 1.0;
+}
+smallcolumn{
+	border:  0 solid black;
+	padding: 0 40px 0 20px;
+	flex: 0.75;
+}
+
+
+/* ==================================================== */
+/* Pysical Compressor Model */
+/* ==================================================== */
+.typcompressor {
+	width: 220px;
+}
+
+/*!
+* AerWebCopy Engine [version 6.3.0]
+* Copyright Aeroson Systems & Co.
+* File mirrored from http://3.66.80.241/static/webtools/css/main.css
+* At UTC time: 2021-05-21 14:29:01.891306
+*/
